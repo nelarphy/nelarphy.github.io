@@ -1,0 +1,885 @@
+/* Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+
+/* Main Variables */
+
+:root{
+    --mainColor:#ac9c8a;
+    --headingColor: black;
+    --textColor: #302115;
+    --border: 2px solid var(--mainColor);
+
+}
+
+::selection {
+    color: white;
+    background: #ac9c8a;
+  } 
+
+body{
+    color: var(--textColor);
+}
+
+.btn{
+    display: inline-block;
+    border: 2px solid #ac9c8a;
+    background-color: var(--mainColor);
+    color: var(--textColor);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+
+.btn i{
+    font-size: 14px;
+    margin-right: 4px;
+}
+
+.padding{
+    padding: 150px 10%;
+}
+
+@media only screen and (max-width: 900px){
+    .padding{
+        padding: 100px 5%;
+    }
+}
+
+/*------------------------------------------------*/
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 10%;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+header .logo h1{
+    color: var(--mainColor);
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+header nav a{
+    font-weight: 500;
+    padding: 3px 20px;
+    transition: 0.3s;   
+    color: #9c9c9c;
+}
+
+header nav a:hover{
+    color: #D2C2B0;;
+}
+
+header nav .active{
+    color:  #D2C2B0;
+}
+
+.scroll-header{
+    padding: 15px 10%;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 50%);
+}
+
+header .head-btn a:hover{
+    background: transparent;
+    color: #bba38f;
+    border: 2px solid #D2C2B0;
+    transition: .4s;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+/* Responsive Menu Btn */
+
+#MenuBtn{
+    color: var(--textColor);
+    background-color: var(--mainColor);
+    font-size: 22px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+    display: none;
+}
+
+@media only screen and (max-width: 860px){
+    header .head-btn{
+       display: none;
+    }
+}
+
+@media only screen and (max-width: 690px){
+    #MenuBtn{
+       display: block;
+    }
+    header nav{
+        overflow: hidden;
+        position: absolute;
+        top: 75px;
+        right: 10%;
+        width: 190px;
+        height: 0;
+        background-color: white;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 20%);;
+        transition: all 0.5s ease-in-out;
+    }
+    header nav a{
+        display: block;
+        margin: 15px 20px;
+    }
+    .Res-Menu{
+        height: 200px;
+    }
+}
+
+
+/* ========================== HOME SECTION START ===================================== */
+
+#home{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-image:url(img/me11.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+#home::before{
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.454);
+}
+
+#home .home-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    z-index: 5;
+}
+
+#home .home-row .left-col{
+    flex-basis: 50%;
+    z-index: 5;
+    margin-top: 120px;
+}
+
+#home .home-row .left-col .heading{
+    margin: 10px 0;
+    font-size: 38px;
+    color: white;
+}
+
+.circle-text{
+    color: var(--textColor);
+    font-weight: 600;
+    border: var(--border);
+    border-radius: 50%;
+    padding: 5px;
+    display: inline-block;
+    margin: 5px 0;
+}
+
+
+.heading{
+    margin: 10px 0;
+    font-size: 38px;
+    color: var(--headingColor);
+}
+
+.heading span{
+    color: var(--mainColor)
+}
+
+.sub-para{
+    font-weight: 500;
+    font-size: 15px;
+    margin: 27px 0;
+    color: var(--textColor);
+}
+
+
+#home .home-row .left-col .sub-para{
+    font-weight: 500;
+    font-size: 15px;
+    margin: 27px 0;
+    color: white;
+}
+
+
+#home .home-row .left-col .heading span{
+    color: white;
+}
+
+#home .home-row .typing{
+    color: rgba(219, 219, 219, 0.952);
+    font-weight: 900;
+    font-size: 40px;
+}
+
+#home .home-row .left-col .typing span{
+    color: #D2C2B0;
+}
+
+#home .home-row .left-col .buttons{
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+}
+#home .home-row .right-col{
+    flex-basis: 30%;
+    position: relative;
+    text-align: center;
+    z-index: 5;
+}
+
+/*#home .home-row .right-col::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 78%;
+    height: 90%;
+    border: 7px solid var(--mainColor);
+    z-index: -1;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 50%;
+}*/
+
+#home .home-row .right-col img{
+    width: 100%;
+    height: 100%;
+    margin-top: -50px;
+    align-items: center;
+}
+
+#home .social-icon{
+    position: absolute;
+    top: 27%;
+    right: 4%;
+    text-align: center;
+}
+
+#home .social-icon p{
+    position: relative;
+    color: var(--mainColor);
+    writing-mode: vertical-rl;
+    padding-bottom: 25px;
+    font-weight: 500px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+#home .social-icon p::after{
+    content: ' ';
+    position: absolute;
+    bottom: -50px;
+    left: 40%;
+    width: 2px;
+    height: 60px;
+    background-color: var(--mainColor);
+    border: 2px;
+}
+
+#home .social-icon .icon{
+    margin-top: 65px;
+}
+
+#home .social-icon .icon a{
+    color: white;
+    display: block;
+    border: none;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 30px 0;
+    border-radius: 50%;
+}
+
+#home .social-icon .icon a:hover{
+    color: white;
+    display: block;
+    border: none;
+    font-size: 15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    background-color: var(--mainColor);
+    margin: 30px 0;
+    border-radius: 50%;
+    transition: .4s;
+}
+
+
+/* ========================== RESPONSIVE HOME ===================================== */
+
+@media only screen and (max-width: 1375px) {
+    .sub-para br{
+        display: none;
+    }
+
+    #home .social-icon{
+        top: 20%;
+        right: 4%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    #home{
+        height: auto;
+    }
+
+    #home .home-row{
+        flex-direction: column;
+        gap: 100px;
+    }
+
+    #home .home-row .left-col{
+        width: 100%;
+        padding-right: 50px;
+    }
+
+    #home .home-row .right-col{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    #home .social-icon{
+        top: 10%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    #home .home-row .right-col{
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .heading{
+        font-size: 30px;
+    }
+
+    .heading br{
+        display: none;
+    }
+    
+    .sub-para{
+        font-size: 13px;
+    }
+
+    .sub-para br{
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 440px){
+    #home .home-row .left-col .buttons{
+        flex-direction: column;
+    }
+
+    #home .home-row .left-col .buttons a{
+        width: 170px;
+        text-align: center;
+    }
+}
+
+/* ========================== HOME SECTION END ===================================== */
+
+/* ========================== FEATURE START ===================================== */
+#feature{
+    padding: 50px 10%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    overflow: hidden;
+    margin-top: 90px;
+    margin-bottom: 30px;
+}
+
+#feature .feature-item{
+    text-align: center;
+}
+
+#feature .feature-item p{
+    color: var(--mainColor);
+    font-size: 35px;
+    font-weight: 600;
+}
+
+#feature .feature-item p + p{
+    color: var(--headingColor);
+    font-size: 22px;
+}
+
+/* ========================== RESPONSIVE FEAUTURE ===================================== */
+
+@media only screen and (max-width: 650px){
+    #feature{
+       grid-template-columns: 1fr 1fr;
+       grid-gap: 25px;
+    }
+    #feature .feature-item{
+        border: none!important;
+    }
+}
+
+@media only screen and (max-width: 414px){
+    #feature{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
+
+@media only screen and (max-width: 405px){
+    #feature{
+        grid-template-columns: 1fr;
+        grid-gap: 20px;
+    }
+}
+/* ========================== FEATURE END ===================================== */
+
+/* ========================== SERVICES START ===================================== */
+
+#service .ser-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+#service .ser-row .ser-left{
+    flex-basis: 50%;
+}
+
+#service .ser-row .ser-left a:hover{
+    background: transparent;
+    color: #523925;
+    border: 2px solid #D2C2B0;
+    transition: .4s;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+#service .ser-row .ser-right{
+    flex-basis: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+#service .ser-row .ser-right .ser-left{
+    margin-top: 50px;
+}
+
+#service .ser-row .ser-right .ser-item{
+    margin-top: 50px;
+}
+
+#service .ser-row .ser-right .ser-item i{
+    color: var(--mainColor);
+    font-size: 21px;
+}
+
+#service .ser-row .ser-right .ser-item h3{
+    color: var(--headingColor);
+    font-size: 21px;
+    font-weight: 600;
+    margin: 7px 0;
+}
+
+#service .ser-row .ser-right .ser-item p{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* ========================== RESPONSIVE SERVICE ===================================== */
+@media only screen and (max-width: 870px){
+    #service .ser-row{
+        flex-direction: column;
+    }
+
+    #service .ser-row .ser-left{
+        margin-right: 50px;
+    }
+}
+
+@media only screen and (max-width: 420px){
+    #service .ser-row{
+        gap: 0;
+    }
+    #service .ser-row .ser-left{
+        margin-right: 0;
+    }
+    #service .ser-row .ser-right{
+        flex-direction: column;
+        gap: 0;
+    }
+}
+/* ========================== SERVICES END ===================================== */
+
+/* ========================== ABOUT START ===================================== */
+
+#about{
+    width: 100%;
+    background-color: white;
+    position: relative;
+}
+
+#about .col{
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 20%);
+    padding: 60px;
+    border-radius: 4px;
+}
+
+#about .col a:hover{
+    background: transparent;
+    color: #523925;
+    border: 2px solid #D2C2B0;
+    transition: .4s;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+/* ========================== RESPONSIVE ABOUT ===================================== */
+@media only screen and (max-width: 730px){
+    #about .col{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 870px){
+    #about .col{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1050px){
+    #about .col{
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1056px){
+    #about .col{
+        width: 100%;
+    }
+}
+
+/* ========================== ABOUT END ===================================== */
+
+/* ========================== PORTFOLIO START ===================================== */
+
+#portfolio .port-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px
+}
+
+#portfolio .port-row .port-left{
+    flex-basis: 40%;
+}   
+
+#portfolio .port-row .port-left a:hover{
+    background: transparent;
+    color: #523925;
+    border: 2px solid #D2C2B0;
+    transition: .4s;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+    padding: 7px 20px;
+    border-radius: 5px;
+}
+
+#portfolio .port-row .port-right{
+    flex-basis: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    position: relative;
+}   
+
+#portfolio .port-row .port-right .img-box{
+    overflow: hidden;
+    border: 4px solid white;
+    border-radius: 4px;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 25%);
+}
+
+#portfolio .port-row .port-right .img-box img{
+    width: 100%;
+    height: 100%;
+}
+
+/* ========================== RESPONSIVE PORTFOLIO ===================================== */
+
+@media only screen and (max-width: 1050px){
+    #portfolio .port-row{
+        flex-direction: column;
+    }
+    #portfolio .port-row .port-left{
+        margin-right: 100px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    #portfolio .port-row .port-right{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 450px){
+    #portfolio .port-row .port-left{
+        margin-right: 0px;
+    }
+}
+
+/* ========================== PORTFOLIO END ===================================== */
+
+
+/* ========================== CONTACT START ===================================== */
+#contact .cont-head{
+    text-align: center;
+}
+
+#contact .cont-head .sub-para{
+    margin-bottom: 50px;
+    margin-top: 10px;
+}
+
+#contact .cont-cols{
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+
+#contact .cont-cols .left-col{
+    flex-basis: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+} 
+
+#contact .cont-cols .left-col .icon-row{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#contact .cont-cols .left-col .icon-row .icon-col i{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    color: var(--mainColor);
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    border-radius: 5px;
+}
+
+
+#contact .cont-cols .left-col .icon-row .icon-info p{
+    font-size: 15px;
+    font-weight: 500;
+}
+
+#contact .cont-cols .left-col .icon-row .icon-info p + p{ 
+    color: var(--headingColor);
+}
+
+#contact .cont-cols .right-col{
+    flex-basis: 50%;
+     
+}
+
+#contact .cont-cols .right-col form{
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#contact .cont-cols .right-col textarea{
+    grid-column: span 2;
+}
+
+#contact .cont-cols .right-col form input, textarea{
+    width: 100%;
+    outline: none;
+    border: 2px solid lightgrey;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--textColor);
+    padding: 7px 18px;
+    transition: 0.4s ease-in-out;
+    resize: none;
+}
+
+#contact .cont-cols .right-col form input:focus, textarea:focus{
+    border: var(--border);
+}
+
+#contact .cont-cols .right-col form input::placeholder, textarea::placeholder{
+    font-weight: 400;
+}
+
+#contact .cont-cols .right-col form [type="submit"]{
+    position: absolute;
+    bottom: -60px;
+    right: 0;
+    width: 180px;
+    background: var(--mainColor);
+    border: var(--border);
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+/* ========================== RESPONSIVE CONTACT ===================================== */
+
+@media only screen and (max-width: 1050px){
+    #contact .cont-cols .right-col form{
+        grid-template-columns: 1fr;
+    }
+    #contact .cont-cols .right-col form textarea{
+        grid-column: span 1;
+    }
+
+    #contact .cont-cols .left-col{
+        justify-content: center;
+        gap: 40px;
+    }
+}
+
+@media only screen and (max-width: 750px){
+    #contact .cont-cols{
+        flex-direction: column;
+        align-items: center;
+        gap: 40px
+    }
+    #contact .cont-cols .left-col{
+        width: 100%;
+    }
+    #contact .cont-cols .right-col{
+        width: 100%;
+    }
+
+    #contact .cont-cols .right-col form{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #contact .cont-cols .right-col form textarea{
+        grid-column: span 2;
+    }
+}
+
+@media only screen and (max-width: 480px){
+    #contact .cont-cols .right-col form{
+        grid-template-columns: 1fr;
+    }
+
+    #contact .cont-cols .right-col form textarea{
+        grid-column: span 1;
+    }
+}
+
+
+/* ========================== CONTACT END ===================================== */
+
+
+/* ========================== FOOTER START ===================================== */
+
+footer{
+    padding: 0 10%;
+    margin-top: 50px;
+}
+
+footer .foot{
+    padding: 20px 10px;
+    border-top: 1px solid var(--textColor);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .foot p{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+footer .foot i{
+    width: 35px;
+    height: 35px;
+    background-color: var(--mainColor);
+    color: white;
+    text-align: center;
+    line-height: 35px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* ========================== RESPONSIVE FOOTER ===================================== */
+
+@media only screen and (max-width: 650px){
+    footer .foot{
+        flex-direction: column;
+    }
+}
